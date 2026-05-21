@@ -47,6 +47,7 @@ export function CharacterGrid({
               <img
                 src={c.iconPath}
                 alt={c.name}
+                decoding="async"
                 className="aspect-square w-full select-none object-cover"
                 draggable={false}
               />

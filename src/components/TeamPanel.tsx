@@ -37,6 +37,8 @@ function PortraitCard({
           <img
             src={c.portraitPath}
             alt={c.name}
+            loading="lazy"
+            decoding="async"
             className={`absolute inset-0 h-full w-full object-cover ${isBan && !isPending ? 'grayscale' : ''}`}
             style={{ objectPosition: c.portraitPosition ?? 'center top' }}
             draggable={false}
