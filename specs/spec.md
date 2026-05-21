@@ -1,0 +1,13 @@
+Generate a game character banning + selection system where you will use sources\interface\viber_image_2026-05-21_14-03-24-719.jpg as reference for the User interface. Use sources\interface\Digmaan-Thumbnail.png for the logo above.
+The system will have 3 phases namely the coin toss, banning phase and selection phase. 
+In the coin toss phase, team A and team B will choose heads or tails, and when both teams have chosen, toss a coin, the winner of the coin toss will be the first turn on both banning phase and selection phase.
+In the banning phase, winner of coin toss (E.g Team A) can select a character from the character icons at the middle, when the character icon is selected, it will display the corresponding portait on team A's banning box. There should be a "Lock Pick" button to lock this ban, when a ban is lock picked, it is now the loser of coin toss (E.g team B's) turn to select their ban, but on their turn, the selected character ban of team A will have an unclickable gray icon indicating that it is already banned. The rest of the banning phase will continue alternately between teams until both teams have 3 bans each.
+Selection phase begins when both teams have 3 bans each.
+On the selection phase, all 6 character bans from both teams will have an unclickable gray icon indicating they can't be chosen in the selection phase.
+The winner of the first coin toss will still be the first team to select a character for this phase. There should also be a "Lock Pick" button in this phase as well.
+Unlike the banning phase, after the first team have their pick, the second and third pick will be on the opposing team's turn and the fourth and fifth pick will go back to the first team, lastly the sixth pick will be on the opposing team.
+And like on the banning phase, locked picks in the selection phase cannot be picked again (e.g Team A picked Ai on selection, Team B cannot click it anymore and its grayed out)
+Use sources\icons for the character icons that's going to be displayed in the middle, as for their corresponding portrait, use sources\portraits and to know which portrait is for what icon, there are names to be compared, e.g. CharIcon_Amy.webp (icon) has Grand_Chase_for_kakao_Amy_05.webp (portrait)
+After the selection phase concluded, display a text "Tournament Begins"
+There should also be a reset button at all times where the system will go back to the coin toss phase again and start everything over.
+Use tech-stack that can easily be deployed in vercel, use "D:\Mhari\Projects\smartcli-web" as reference for deployment, directory structures for documentations, and .claude
