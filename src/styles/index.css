@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  background:
+    radial-gradient(ellipse at top, rgba(122, 58, 163, 0.35), transparent 60%),
+    radial-gradient(ellipse at bottom, rgba(30, 199, 199, 0.12), transparent 70%),
+    linear-gradient(180deg, #120821 0%, #1a0e2a 50%, #0d0618 100%);
+  background-attachment: fixed;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+@layer components {
+  .team-banner {
+    @apply px-8 py-2 font-display text-lg tracking-widest text-white uppercase;
+    clip-path: polygon(6% 0, 100% 0, 94% 100%, 0 100%);
+  }
+  .team-banner-a {
+    background: linear-gradient(90deg, rgba(30, 199, 199, 0.95), rgba(30, 199, 199, 0.55));
+  }
+  .team-banner-b {
+    background: linear-gradient(90deg, rgba(226, 58, 58, 0.55), rgba(226, 58, 58, 0.95));
+  }
+  .card-frame {
+    @apply relative overflow-hidden rounded-2xl border-[3px] transition-all duration-200;
+  }
+  .card-a {
+    @apply border-team-a;
+    box-shadow: 0 0 28px rgba(30, 199, 199, 0.55), inset 0 0 36px rgba(30, 199, 199, 0.18);
+  }
+  .card-b {
+    @apply border-team-b;
+    box-shadow: 0 0 28px rgba(226, 58, 58, 0.55), inset 0 0 36px rgba(226, 58, 58, 0.18);
+  }
+  .card-empty-bg {
+    background:
+      repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0 8px, transparent 8px 16px),
+      #0d0618;
+  }
+  .icon-tile {
+    @apply relative overflow-hidden rounded-md border border-white/10 bg-black/30 transition-transform duration-150;
+  }
+  .icon-tile:hover:not(.is-disabled) {
+    @apply scale-105 border-white/40;
+  }
+  .icon-tile.is-disabled {
+    @apply cursor-not-allowed opacity-40 grayscale;
+  }
+  .icon-tile.is-selected-a {
+    @apply ring-2 ring-team-a;
+    box-shadow: 0 0 14px rgba(30, 199, 199, 0.7);
+  }
+  .icon-tile.is-selected-b {
+    @apply ring-2 ring-team-b;
+    box-shadow: 0 0 14px rgba(226, 58, 58, 0.7);
+  }
+  .btn {
+    @apply inline-flex items-center justify-center rounded-md px-5 py-2 font-display tracking-wider uppercase text-sm transition-all;
+  }
+  .btn-primary {
+    @apply bg-gradient-to-b from-amber-400 to-amber-600 text-black shadow-md hover:from-amber-300 hover:to-amber-500;
+  }
+  .btn-danger {
+    @apply border border-red-500/60 bg-red-900/40 text-red-200 hover:bg-red-800/60;
+  }
+  .btn-ghost {
+    @apply border border-white/15 bg-white/5 text-white hover:bg-white/10;
+  }
+  .btn:disabled {
+    @apply cursor-not-allowed opacity-40;
+  }
+}
